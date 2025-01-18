@@ -29,3 +29,16 @@ img {
     display: block;
     max-inline-size: 100%;
 }
+@font-face{
+    font-family: "Yandex Sans";
+    src: url(../fonts/YandexSansDisplay-Regular.woff) format(woff);
+    font-weight: 500;
+}
+@font-face{
+    font-family: "Yandex Sans";
+    src: url(../fonts/YandexSansText-Medium.woff) format(woff);
+    font-weight: 400;
+}
+*{
+    font-family: "Yandex Sans";
+}
