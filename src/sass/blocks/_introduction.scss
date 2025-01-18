@@ -1,0 +1,27 @@
+.introduction{
+    background: url(../img/bg-main.png) center center / cover no-repeat;
+    &__header{
+        padding: 8px; 
+        &__bacground{
+            display: flex;
+            background-color: #fff;
+            padding: 8px 16px;
+            border-radius: 8px;
+            img{
+                margin-right: 139px;
+            }
+        }
+    &__references{
+        display: flex;
+        padding: 0;
+        column-gap: 32px;
+        flex-wrap: wrap;
+        align-items: center;
+        list-style-type: none; 
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+    }
+    }
+} 
