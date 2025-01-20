@@ -107,16 +107,18 @@
             //     // animation: typing 4s steps(24) forwards;
             // }
             .Placeholderbility{
-            width: 100%;
+                width: 635px;
+                height: 88px;
+                background-color: #94ceebe3;
             position: absolute;
             left: -6px;
-            background-color: #94ceebe3;
             color: #fff;
             position: relative;
                 &::after {
                     content: "|";
                     position: absolute;
                     right: 0;
+                    height: 88px;
                     width: 100%;
                     color: $black-color;
                     background-color: $yellow-color;

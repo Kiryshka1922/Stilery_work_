@@ -42,7 +42,27 @@ img {
 *{
     font-family: "Yandex Sans";
 }
+:root{
+    --item-number: "1";
+}
 @import "base/variables.scss";
+.container{
+    padding: 0 9.45%;
+    background-color: $black-color;
+}
+.counter-section {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter {
+    font-size: 2rem;
+    text-align: center;
+}
 @import "blocks/introduction";
 @import "blocks/button";
+@import "blocks/meetup-info";
+@import "blocks/quetions";
 // @import "blocks/_introduction.scss";
