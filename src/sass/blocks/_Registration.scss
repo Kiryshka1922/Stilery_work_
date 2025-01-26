@@ -126,6 +126,7 @@
     }
 }
 .Registration{
+    position: relative;
     background-color: $black-color;
     padding: 0 0 160px 132px;
     h2{
@@ -164,6 +165,44 @@
         }
 
     }
+}
+.bg__reg_1{
+    position: absolute;
+    top: -102px;
+    right: 0;
+    
+}
+.bg__reg_2{
+    position: absolute;
+    top: 216px;
+    right: 17px;
+
+}
+.group_1{
+    position: absolute;
+    top: 171px;
+    right: 349px;
+}
+.group_2{
+    position: absolute;
+    top: 32px;
+    right: 0;
+}
+.group_3{
+    position: absolute;
+    top: 302px;
+    right: 116px;
+    transform: rotate(-6.65deg);
+}
+.arrow-yellow{
+    position: absolute;
+    top: 408px;
+    right: 16px;
+}
+.tumbl{
+    position: absolute;
+    top: 671px;
+    right: -10px;
 }
 .sumbit{
     margin-top: 64px;
