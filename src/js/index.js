@@ -4,22 +4,55 @@
             const number = (index + 1).toString().padStart(2, '0');
             item.style.setProperty('--item-number', '"' + number + '"');
         });
-// let upto = 0;
-// let counts = setInterval(updated, 10);
-// function updated() {
-//     let count = document.getElementById("counter");
-//     count.innerHTML = ++upto;
-//     if (upto === 800) {
-//         clearInterval(counts);
-//     }
-// }
-// let upto_1 = 0;
-// let counts_1 = setInterval(updated_1, 15);
+const selectSingle = document.querySelector('.__select');
+const selectSingle_title = selectSingle.querySelector('.__select__title');
+const selectSingle_labels = selectSingle.querySelectorAll('.__select__label');
 
-// function updated_1() {
-//     let count_1 = document.getElementById("counter_1");
-//     count_1.innerHTML = ++upto_1;
-//     if (upto_1 === 42) {
-//         clearInterval(counts);
-//     }
-// }
+// Toggle menu
+selectSingle_title.addEventListener('click', () => {
+  if ('active' === selectSingle.getAttribute('data-state')) {
+    selectSingle.setAttribute('data-state', '');
+  } else {
+    selectSingle.setAttribute('data-state', 'active');
+  }
+});
+
+// Close when click to option
+for (let i = 0; i < selectSingle_labels.length; i++) {
+  selectSingle_labels[i].addEventListener('click', (evt) => {
+    selectSingle_title.textContent = evt.target.textContent;
+    selectSingle.setAttribute('data-state', '');
+  });
+}
+
+const btns = document.getElementsByClassName('rules__checkbox');
+
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    // Проверяем, есть ли у текущей кнопки класс 'active'
+    if (this.classList.contains('active')) {
+      // Если есть, удаляем его
+      this.classList.remove('active');
+    } else {
+      // Если нет, добавляем его
+      this.classList.add('active');
+    }
+  });
+}
+$(document).ready(function(){
+  $(window).scroll(function() {
+          if ($(this).scrollTop() > 1600) {
+              $('.pageup').fadeIn();
+          } else {
+              $('.pageup').fadeOut();
+          }
+      });
+  
+      $("a[href='#up']").click(function(){
+          const _href = $(this).attr("href");
+          $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+          return false;
+      });
+  
+      new WOW().init();
+});

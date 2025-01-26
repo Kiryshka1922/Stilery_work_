@@ -41,6 +41,7 @@ img {
 }
 *{
     font-family: "Yandex Sans";
+    scroll-behavior: smooth;
 }
 :root{
     --item-number: "1";
@@ -67,4 +68,6 @@ img {
 @import "blocks/quetions";
 @import "blocks/sheldue";
 @import "blocks/setarticles";
+@import "blocks/Registration";
+@import "blocks/pageup";
 // @import "blocks/_introduction.scss";
