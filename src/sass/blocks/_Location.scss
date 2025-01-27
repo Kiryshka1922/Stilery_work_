@@ -1,6 +1,7 @@
 .Location{
     background-color: $black-color;
-    padding-bottom: 160px;
+    padding: 0 32px 160px 32px;
+    
     &__bg{
         background-color: #fff;
         padding: 32px 32px 64px 32px;

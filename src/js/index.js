@@ -56,3 +56,27 @@ $(document).ready(function(){
   
       new WOW().init();
 });
+
+let swiper = new Swiper (".swiper", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  speed: 400,
+  preventClicks: true,
+  noSwiping: true,
+  freeMode: false,
+  navigation:{
+    nextEl: ".next",
+    prevEl: ".prev",
+  },
+  breakpoints: {
+    550: {
+      slidesPerView: 2, 
+      spaceBetween: 20,
+    }, 
+    
+  }
+})
+// const swiper_1 = document.querySelector('.swiper').swiper;
+
+// // Now you can use all slider methods like
+// swiper.slideNext();

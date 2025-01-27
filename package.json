@@ -25,6 +25,7 @@
     "not dead"
   ],
   "dependencies": {
-    "gulp-imagemin": "^7.1.0"
+    "gulp-imagemin": "^7.1.0",
+    "swiper": "^11.2.1"
   }
 }
