@@ -1,11 +1,11 @@
-//             Номера в вопросиках
+//             РќРѕРјРµСЂР° РІ РІРѕРїСЂРѕСЃРёРєР°С…
 let quetionnItem = document.querySelectorAll('.quetions__item');
 
     quetionnItem.forEach((item, index) => {
         const number = (index + 1).toString().padStart(2, '0');
         item.style.setProperty('--item-number', '"' + number + '"');
     });
-//              Счетчики     
+//              РЎС‡РµС‚С‡РёРєРё     
 const counterDiv = document.getElementById('count');
 const counterDiv_2 = document.getElementById('count_2');
     
@@ -68,7 +68,7 @@ window.addEventListener('scroll', function() {
         }
       }
     });
-//                 Выбор выпадающий в форме
+//                 Р’С‹Р±РѕСЂ РІС‹РїР°РґР°СЋС‰РёР№ РІ С„РѕСЂРјРµ
 const selectSingle = document.querySelector('.__select');
 const selectSingle_title = selectSingle.querySelector('.__select__title');
 const selectSingle_labels = selectSingle.querySelectorAll('.__select__label');
@@ -88,22 +88,22 @@ for (let i = 0; i < selectSingle_labels.length; i++) {
     selectSingle.setAttribute('data-state', '');
   });
 }
-//           Чекбоксы 
+//           Р§РµРєР±РѕРєСЃС‹ 
 const btns = document.getElementsByClassName('rules__checkbox');
 
 for (let i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function() {
-    // Проверяем, есть ли у текущей кнопки класс 'active'
+    // РџСЂРѕРІРµСЂСЏРµРј, РµСЃС‚СЊ Р»Рё Сѓ С‚РµРєСѓС‰РµР№ РєРЅРѕРїРєРё РєР»Р°СЃСЃ 'active'
     if (this.classList.contains('active')) {
-      // Если есть, удаляем его
+      // Р•СЃР»Рё РµСЃС‚СЊ, СѓРґР°Р»СЏРµРј РµРіРѕ
       this.classList.remove('active');
     } else {
-      // Если нет, добавляем его
+      // Р•СЃР»Рё РЅРµС‚, РґРѕР±Р°РІР»СЏРµРј РµРіРѕ
       this.classList.add('active');
     }
   });
 }
-//           Стрелка возвращающая вверх c помощью jQuery
+//           РЎС‚СЂРµР»РєР° РІРѕР·РІСЂР°С‰Р°СЋС‰Р°СЏ РІРІРµСЂС… c РїРѕРјРѕС‰СЊСЋ jQuery
 const Sl_opacity = document.getElementsByClassName('Slowly_opacity');
 $(document).ready(function(){
   $(window).scroll(function() {
@@ -121,7 +121,7 @@ $(document).ready(function(){
       });
       
       new WOW().init();
-      //             Текст вначале 
+      //             РўРµРєСЃС‚ РІРЅР°С‡Р°Р»Рµ 
       $(window).scroll(function() {
          if ($(this).scrollTop() > 850) {
              $('.Slowly_opacity').addClass('activate_p');
@@ -130,7 +130,7 @@ $(document).ready(function(){
          }
      });
 });
-//            Слайдеры 
+//            РЎР»Р°Р№РґРµСЂС‹ 
 let swiper = new Swiper (".swiper", {
   slidesPerView: 1,
   spaceBetween: 10,
@@ -169,18 +169,18 @@ let swiper_2 = new Swiper (".swiper_2", {
     
   }
 })
-//               Placeholder свой
-const inputs = document.querySelectorAll('input'); // Получаем все input элементы
-const addedClasses = new WeakSet(); // Создаем WeakSet для отслеживания добавленных классов
+//               Placeholder СЃРІРѕР№
+const inputs = document.querySelectorAll('input'); // РџРѕР»СѓС‡Р°РµРј РІСЃРµ input СЌР»РµРјРµРЅС‚С‹
+const addedClasses = new WeakSet(); // РЎРѕР·РґР°РµРј WeakSet РґР»СЏ РѕС‚СЃР»РµР¶РёРІР°РЅРёСЏ РґРѕР±Р°РІР»РµРЅРЅС‹С… РєР»Р°СЃСЃРѕРІ
 
 inputs.forEach(input => {
     input.addEventListener('focus', function() {
-        const nameDiv = this.nextElementSibling; // Находим следующий элемент, div.name
+        const nameDiv = this.nextElementSibling; // РќР°С…РѕРґРёРј СЃР»РµРґСѓСЋС‰РёР№ СЌР»РµРјРµРЅС‚, div.name
 
-        if (nameDiv && nameDiv.classList.contains('name')) { // Если это div.name
-          if (!addedClasses.has(nameDiv)){ // Проверяем, добавляли ли мы уже класс
-              nameDiv.classList.add('active-placeholder'); // Добавляем класс
-              addedClasses.add(nameDiv);  // Помечаем, что класс добавлен
+        if (nameDiv && nameDiv.classList.contains('name')) { // Р•СЃР»Рё СЌС‚Рѕ div.name
+          if (!addedClasses.has(nameDiv)){ // РџСЂРѕРІРµСЂСЏРµРј, РґРѕР±Р°РІР»СЏР»Рё Р»Рё РјС‹ СѓР¶Рµ РєР»Р°СЃСЃ
+              nameDiv.classList.add('active-placeholder'); // Р”РѕР±Р°РІР»СЏРµРј РєР»Р°СЃСЃ
+              addedClasses.add(nameDiv);  // РџРѕРјРµС‡Р°РµРј, С‡С‚Рѕ РєР»Р°СЃСЃ РґРѕР±Р°РІР»РµРЅ
           }
         }
     });
