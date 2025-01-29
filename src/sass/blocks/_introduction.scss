@@ -92,20 +92,6 @@
             line-height: 80px;
             max-width: 48%;
             margin-bottom: 32px;
-            // .title_transition{
-            //     // position: relative;
-            //     // &::after {
-            //     //     content: "|";
-            //     //     position: absolute;
-            //     //     right: 0;
-            //     //     width: 100%;
-            //     //     background-color: #94ceebe3;
-            //     //     color: white;
-            //     //     animation: typing 4s steps(24) forwards,
-            //     //         caret 1s infinite;
-            //     // }
-            //     // animation: typing 4s steps(24) forwards;
-            // }
             .Placeholderbility{
                 width: 635px;
                 height: 88px;
@@ -124,8 +110,7 @@
                     background-color: $yellow-color;
                     animation: typing 4s steps(25) forwards,
                         caret 1s infinite;
-                }
-                // animation: typing 4s steps(24) forwards;
+                };
             }
                 &__psevdoelements{
                     .Taxi{
